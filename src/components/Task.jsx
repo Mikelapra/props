@@ -4,9 +4,10 @@
 function Task({ task, deleteTask, markTask }) {
   return (
     <>
-        <div onClick={() => markTask(task.id)} style={{ textDecoration: task.completed ? 'line-through' : "none"}}>
-        {task.text}
-         <button onClick={() => deleteTask(task.id)}>Eliminar</button>
+        <div>
+            <div onClick={() => markTask(task.id)} style={{ textDecoration: task.completed ? 'line-through' : "none"}}>
+            {task.text}</div>
+            <button onClick={() => deleteTask(task.id)}>Eliminar</button>
         </div>
     </>
   );
